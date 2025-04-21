@@ -1,0 +1,142 @@
+/* Reset some basic styles */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-image: url('/images.jpg'); /* Changed from background.jpg to images.jpg */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh; /* Ensure full viewport height */
+  margin: 0; /* Remove default margin */
+}
+
+/* Add a subtle overlay for better text readability */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2); /* Slightly darker semi-transparent overlay */
+  z-index: -1; /* Place behind content */
+}
+
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative; /* Needed for overlay z-index */
+  z-index: 1;
+}
+
+main {
+  flex-grow: 1;
+  padding: 2rem 1rem;
+}
+
+/* Make sections slightly transparent to show background */
+section {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.85); /* Slightly transparent white background */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #333; /* Ensure text within sections is dark */
+}
+
+h1, h2, h3 {
+  color: #1a5276; /* Dark blue heading color */
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: #555; /* Darker paragraph text within sections */
+}
+
+a {
+  color: #3498db; /* Link color */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Basic Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInAnimation 0.8s ease-out forwards;
+}
+
+@keyframes fadeInAnimation {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Remove Hero section specific background adjustments if they conflict */
+.hero {
+  background-color: transparent; /* Ensure hero section is transparent */
+  box-shadow: none;
+  color: #333; /* Adjust text color if needed for readability */
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5); /* Light shadow for contrast */
+}
+
+.hero h1 {
+ color: #1a5276; /* Keep hero heading dark blue */
+}
+
+.hero p {
+  color: #555; /* Keep hero paragraph text dark */
+}
+
+/* Adjust Header text color for visibility */
+.header {
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white header */
+}
+.header .logo, .header nav a {
+  color: #2c3e50; /* Ensure header text is dark */
+}
+.header nav a:hover {
+  color: #3498db;
+}
+
+
+/* Adjust Footer text color */
+.footer {
+   background-color: rgba(44, 62, 80, 0.8); /* Semi-transparent dark footer */
+}
+.footer p {
+  color: #ecf0f1; /* Keep footer text light */
+}

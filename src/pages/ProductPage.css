@@ -1,0 +1,88 @@
+/* Shared styles for product detail pages */
+
+.product-page {
+  padding-top: 80px; /* Space for fixed header */
+  /* Adjust min-height if needed, but focus on section spacing */
+  min-height: calc(100vh - 80px - 60px); /* Adjust based on header/footer height */
+  color: #333; /* Default text color */
+}
+
+.product-page h1 {
+  color: #1a5276;
+  text-align: center;
+  margin-bottom: 1rem; /* Reduced margin */
+  font-size: 2rem; /* Slightly reduced font size */
+}
+
+.product-page > p { /* Style the introductory paragraph */
+  text-align: center;
+  font-size: 1rem; /* Slightly reduced font size */
+  margin-bottom: 2rem; /* Reduced margin */
+  color: #555;
+}
+
+.product-section {
+  margin-bottom: 1.5rem; /* Reduced margin between sections */
+  padding: 1.5rem; /* Reduced padding within sections */
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-section h2 {
+  color: #34495e;
+  border-bottom: 1px solid #e0e0e0; /* Thinner border */
+  padding-bottom: 0.3rem; /* Reduced padding */
+  margin-bottom: 1rem; /* Reduced margin */
+  font-size: 1.5rem; /* Slightly reduced font size */
+}
+
+.product-section p {
+  color: #555;
+  margin-bottom: 0.8rem; /* Reduced margin */
+  font-size: 0.95rem; /* Slightly reduced font size */
+}
+
+/* Add styles for sections a, b, c if needed */
+/* For example, specific background colors or borders */
+/*
+#section-a { background-color: #f8f9f9; }
+#section-b { background-color: #eaf2f8; }
+#section-c { background-color: #f8f9f9; }
+*/
+
+/* Photo Gallery Styles */
+.photo-gallery {
+  /* Adjust grid for potentially smaller space */
+  /* Changed to flexbox to easily center a single image */
+  display: flex;
+  justify-content: center; /* Center the image */
+  gap: 0.8rem; /* Reduced gap */
+  margin-top: 1rem; /* Reduced margin */
+}
+
+/* Styling for the actual image or placeholder image */
+.product-image-placeholder {
+  width: 100%;
+  max-width: 300px; /* Limit max width */
+  height: auto; /* Maintain aspect ratio */
+  /* height: 120px; /* Reduced height for placeholders */ */
+  background-color: #e0e0e0; /* Grey background for placeholder */
+  border-radius: 4px;
+  /* display: flex; */ /* Removed flex properties as img is inline/block */
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* font-size: 0.8rem; */
+  /* color: #aaa; */
+  /* font-weight: bold; */
+  object-fit: cover; /* Cover the area without distortion */
+  overflow: hidden; /* Hide any overflow */
+}
+
+/* If using actual images later */
+/* .photo-gallery img {
+  width: 100%;
+  height: 100%; /* Fill the container */
+  /* object-fit: cover; /* Cover the area without distortion */
+  /* border-radius: 4px; */
+/* } */

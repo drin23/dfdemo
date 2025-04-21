@@ -1,0 +1,89 @@
+.product-showcase {
+  text-align: center;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.product-card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: left;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px; /* Fixed height */
+  object-fit: cover; /* Cover the area */
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+/* Placeholder styling */
+.placeholder-image {
+  width: 100%;
+  height: 200px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #aaa;
+  font-weight: bold;
+}
+
+.product-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #34495e;
+}
+
+.product-card p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  flex-grow: 1; /* Push button down if needed */
+}
+
+.details-button {
+  display: inline-block;
+  background-color: #ecf0f1; /* Light grey button */
+  color: #34495e;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.details-button:hover {
+  background-color: #bdc3c7;
+  text-decoration: none;
+}
+
+.product-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+}
+
+.product-card-link:focus .product-card,
+.product-card-link:hover .product-card {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
